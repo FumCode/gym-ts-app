@@ -4,6 +4,7 @@ import Logo from '@/assets/Logo.png';
 import Link from "@/scenes/navbar/Link.tsx";
 import {SelectedPage} from "@/shared/types.ts";
 import useMediaQuery from "@/hooks/useMediaQuery.ts";
+import ActionButton from '@/shared/ActionButton.tsx'
 
 
 type Props = {
@@ -16,7 +17,7 @@ const Navbar = ({
                 }: Props) => {
     const flexBetween = 'flex items-center justify-between';
     const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)')
-    const [isMenuToggled, setMenuToggled] = useState<boolean>(false)
+    const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false)
 
     return (
         <nav>
@@ -55,7 +56,7 @@ const Navbar = ({
                             </div>
                             <div className={`${flexBetween} gap-8`}>
                                 <p>Sign In</p>
-                                <button>Become a Member</button>
+                                <ActionButton setSelectedPage={setSelectedPage}>Become a Member</ActionButton>
                             </div>
                         </div>) : (
                             <button
