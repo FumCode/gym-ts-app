@@ -4,3 +4,4 @@ yarn add -D @types/react-anchor-link-smooth-scroll@1.0.2 @types/node
 yarn add -D prettier prettier-plugin-tailwindcss
 
 
+https://www.youtube.com/watch?v=I2NNxr3WPDo&list=WL&index=51
